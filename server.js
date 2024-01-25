@@ -17,7 +17,9 @@ app.use((req, res, next) => {
   console.log(req.path, req.method)
   next()
 })
-
+app.get('/',(req,res)=>{
+  res.json({status:true})
+})
 // routes
 app.use('/api/workouts', workoutRoutes)
 //users
